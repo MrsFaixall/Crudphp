@@ -49,11 +49,11 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
     define('DB_NAME', 'database_name');
     ?>
     ```
-Jika Tidak Ada
-    ```bash
-        -- Membuat database bernama db_sekolah
+Jika Tidak Ada 
+-- Membuat database bernama db_sekolah
     CREATE DATABASE db_sekolah;
-
+    ```bash
+    
     -- Menggunakan database db_sekolah
     USE db_sekolah;
 
