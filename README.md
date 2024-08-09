@@ -29,8 +29,8 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 1. Clone repository ini ke mesin lokal Anda:
 
     ```bash
-    git clone https://github.com/username/repository.git
-    cd repository
+    git clone https://github.com/MrsFaixall/Crudphp.git
+    cd Crudphp
     ```
 
 2. Buat database baru di MySQL dengan nama `db_sekolah` dan tabel `tbl_siswa`:
