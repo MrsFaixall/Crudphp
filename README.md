@@ -49,6 +49,23 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
     define('DB_NAME', 'database_name');
     ?>
     ```
+Jika Tidak Ada
+    ```
+        -- Membuat database bernama db_sekolah
+CREATE DATABASE db_sekolah;
+
+-- Menggunakan database db_sekolah
+USE db_sekolah;
+
+-- Membuat tabel tbl_siswa
+CREATE TABLE tbl_siswa (
+    NISN INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nama_lengkap VARCHAR(100) NOT NULL,
+    alamat TEXT NOT NULL
+);
+
+    ```
+
 
 4. Jalankan proyek ini melalui server web Anda, misalnya dengan menggunakan XAMPP atau WAMP, dan akses melalui browser di `http://localhost/repository`.
 
