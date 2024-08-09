@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <title>Data Siswa</title>
 </head>
 
@@ -19,8 +19,7 @@
                         DATA SISWA
                     </div>
                     <div class="card-body">
-                        <a href="tambah-siswa.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH
-                            DATA</a>
+                        <a href="tambah-siswa.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
                         <table class="table table-bordered" id="myTable">
                             <thead>
                                 <tr>
@@ -37,29 +36,18 @@
                                 $no = 1;
                                 $query = mysqli_query($connection, "SELECT * FROM tbl_siswa");
                                 while ($row = mysqli_fetch_array($query)) {
-                                    ?>
-
+                                ?>
                                     <tr>
-                                        <td>
-                                            <?php echo $no++ ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $row['nisn'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $row['nama_lengkap'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $row['alamat'] ?>
-                                        </td>
+                                        <td><?php echo $no++ ?></td>
+                                        <td><?php echo $row['nisn'] ?></td>
+                                        <td><?php echo $row['nama_lengkap'] ?></td>
+                                        <td><?php echo $row['alamat'] ?></td>
                                         <td class="text-center">
-                                            <a href="edit-siswa.php?id=<?php echo $row['id_siswa'] ?>"
-                                                class="btn btn-sm btn-primary">EDIT</a>
-                                            <a href="hapus-siswa.php?id=<?php echo $row['id_siswa'] ?>"
-                                                class="btn btn-sm btn-danger">HAPUS</a>
+                                            <a href="edit-siswa.php?id=<?php echo $row['id_siswa']; ?>" class="btn btn-sm btn-primary">EDIT</a>
+                                            <a href="hapus-siswa.php?id=<?php echo $row['id_siswa']; ?>" class="btn btn-sm btn-danger">HAPUS</a>
                                         </td>
-                                    </tr>
 
+                                    </tr>
                                 <?php } ?>
                             </tbody>
                         </table>
@@ -67,15 +55,16 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#myTable').DataTable();
-            });
-        </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
 </body>
 
 </html>
