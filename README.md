@@ -29,42 +29,37 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 1. Clone repository ini ke mesin lokal Anda:
 
     ```bash
-    git clone https://github.com/MrsFaixall/Crudphp.git
+    git clone https://github.com/username/repository.git
     cd repository
     ```
 
-2. Buat database baru di MySQL dan impor file `database.sql` yang disediakan di folder `db/`:
+2. Buat database baru di MySQL dengan nama `db_sekolah` dan tabel `tbl_siswa`:
 
-    ```bash
-    mysql -u username -p database_name < db/database.sql
+    ```sql
+    -- Membuat database bernama db_sekolah
+    CREATE DATABASE db_sekolah;
+
+    -- Menggunakan database db_sekolah
+    USE db_sekolah;
+
+    -- Membuat tabel tbl_siswa
+    CREATE TABLE tbl_siswa (
+        NISN INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        nama_lengkap VARCHAR(100) NOT NULL,
+        alamat TEXT NOT NULL
+    );
     ```
 
-3. Konfigurasi koneksi database dengan mengedit file `db/config.php`:
+3. Impor file `database.sql` jika ada dan konfigurasi koneksi database dengan mengedit file `db/config.php`:
 
     ```php
     <?php
     define('DB_SERVER', 'localhost');
     define('DB_USERNAME', 'username');
     define('DB_PASSWORD', 'password');
-    define('DB_NAME', 'database_name');
+    define('DB_NAME', 'db_sekolah');
     ?>
     ```
-Jika Tidak Ada 
--- Membuat database bernama db_sekolah
-    CREATE DATABASE db_sekolah;
-    ```bash
-    
-    -- Menggunakan database db_sekolah
-    USE db_sekolah;
-
-    -- Membuat tabel tbl_siswa
-    CREATE TABLE tbl_siswa (
-    NISN INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    nama_lengkap VARCHAR(100) NOT NULL,
-    alamat TEXT NOT NULL
-    );
-    ```
-
 
 4. Jalankan proyek ini melalui server web Anda, misalnya dengan menggunakan XAMPP atau WAMP, dan akses melalui browser di `http://localhost/repository`.
 
@@ -86,5 +81,3 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 // Membuat dan menulis konten ke dalam file README.md
 file_put_contents($filename, $content);
-
-
