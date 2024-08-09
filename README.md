@@ -50,20 +50,19 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
     ?>
     ```
 Jika Tidak Ada
-    ```
+    ```bash
         -- Membuat database bernama db_sekolah
-CREATE DATABASE db_sekolah;
+    CREATE DATABASE db_sekolah;
 
--- Menggunakan database db_sekolah
-USE db_sekolah;
+    -- Menggunakan database db_sekolah
+    USE db_sekolah;
 
--- Membuat tabel tbl_siswa
-CREATE TABLE tbl_siswa (
+    -- Membuat tabel tbl_siswa
+    CREATE TABLE tbl_siswa (
     NISN INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nama_lengkap VARCHAR(100) NOT NULL,
     alamat TEXT NOT NULL
-);
-
+    );
     ```
 
 
