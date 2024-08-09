@@ -1,4 +1,4 @@
-<?php
+
 
 // Nama file README.md yang akan dibuat
 $filename = 'README.md';
@@ -77,4 +77,4 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 // Membuat dan menulis konten ke dalam file README.md
 file_put_contents($filename, $content);
 
-echo "README.md berhasil dibuat!";
+
