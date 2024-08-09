@@ -1,10 +1,4 @@
 
-
-// Nama file README.md yang akan dibuat
-$filename = 'README.md';
-
-// Konten README.md dalam format Markdown
-$content = "
 # CRUD PHP Project - Belajar
 
 Proyek ini adalah aplikasi sederhana berbasis PHP yang menerapkan operasi CRUD (Create, Read, Update, Delete) untuk belajar dan memahami dasar-dasar pengembangan aplikasi web dengan PHP.
@@ -35,7 +29,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 1. Clone repository ini ke mesin lokal Anda:
 
     ```bash
-    git clone https://github.com/username/repository.git
+    git clone https://github.com/MrsFaixall/Crudphp.git
     cd repository
     ```
 
